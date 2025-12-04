@@ -16,7 +16,7 @@ export const VehicleProperties = () => {
     return (
         <>
             <div className="container mt-5">
-                <div className="card mb-3 w-100" style={{ height: "400px" }}>
+                <div className="card mb-3 w-100 text-bg-dark" style={{ height: "400px" }}>
                     <div className="row g-0">
                         <div className="col-md-7">
                             <img src={details.img_url}
@@ -30,16 +30,16 @@ export const VehicleProperties = () => {
                         </div>
                     </div>
                 </div>
-                <table class="table table-borderless text-center text-danger">
+                <table className="table table-borderless table-dark text-center">
                     <thead>
                         <tr>
-                            <th scope="col" className="border-end">Model</th>
-                            <th scope="col" className="border-end">Vehicle Class</th>
-                            <th scope="col" className="border-end">Manufacturer</th>
-                            <th scope="col" className="border-end">Length</th>
-                            <th scope="col" className="border-end">Cost in Credits</th>
-                            <th scope="col" className="border-end">Passengers</th>
-                            <th scope="col">Max Atmosphering Speed </th>
+                            <th scope="col" className="border-end text-danger">Model</th>
+                            <th scope="col" className="border-end text-danger">Vehicle Class</th>
+                            <th scope="col" className="border-end text-danger">Manufacturer</th>
+                            <th scope="col" className="border-end text-danger">Length</th>
+                            <th scope="col" className="border-end text-danger">Cost in Credits</th>
+                            <th scope="col" className="border-end text-danger">Passengers</th>
+                            <th scope="col" className="text-danger">Max Atmosphering Speed </th>
                         </tr>
                     </thead>
                     <tbody>

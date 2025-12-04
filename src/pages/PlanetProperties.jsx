@@ -12,7 +12,7 @@ export const PlanetProperties = () => {
     return (
         <>
             <div className="container mt-5">
-                <div className="card mb-3 w-100" style={{ height: "400px" }}>
+                <div className="card mb-3 w-100 text-bg-dark" style={{ height: "400px" }}>
                     <div className="row g-0">
                         <div className="col-md-5">
                             <img src={details.img_url}
@@ -26,16 +26,16 @@ export const PlanetProperties = () => {
                         </div>
                     </div>
                 </div>
-                <table class="table table-borderless text-center text-danger">
+                <table class="table table-borderless table-dark text-center">
                     <thead>
                         <tr>
-                            <th scope="col" className="border-end">Climate</th>
-                            <th scope="col" className="border-end">Terrain</th>
-                            <th scope="col" className="border-end">Gravity</th>
-                            <th scope="col" className="border-end">Orbital Period</th>
-                            <th scope="col" className="border-end">Population</th>
-                            <th scope="col" className="border-end">Diameter</th>
-                            <th scope="col">Rotation Period</th>
+                            <th scope="col" className="border-end text-danger">Climate</th>
+                            <th scope="col" className="border-end text-danger">Terrain</th>
+                            <th scope="col" className="border-end text-danger">Gravity</th>
+                            <th scope="col" className="border-end text-danger">Orbital Period</th>
+                            <th scope="col" className="border-end text-danger">Population</th>
+                            <th scope="col" className="border-end text-danger">Diameter</th>
+                            <th scope="col" className="text-danger">Rotation Period</th>
                         </tr>
                     </thead>
                     <tbody>

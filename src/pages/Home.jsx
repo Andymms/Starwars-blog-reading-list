@@ -18,7 +18,10 @@ export const Home = () => {
 			}
 			const data = await characterDetails.json();
 
-			return data.result.properties;
+			return {
+				...data.result.properties,
+				class: "character"
+			};
 
 		} catch (error) {
 			console.error(`Error finding the character: ${character.name}`, error)
@@ -91,7 +94,10 @@ export const Home = () => {
 			}
 			const data = await planetDetails.json();
 
-			return data.result.properties;
+			return {
+				...data.result.properties,
+				class: "planet"
+			};
 
 		} catch (error) {
 			console.error(`Error finding the planet: ${planet.name}`, error)
@@ -164,7 +170,10 @@ export const Home = () => {
 			}
 			const data = await vehicleDetails.json();
 
-			return data.result;
+			return {
+				...data.result,
+				class: "vehicle"
+			};
 
 		} catch (error) {
 			console.error(`Error finding the vehicle: ${vehicle.name}`, error)
@@ -249,27 +258,26 @@ export const Home = () => {
 		}
 	}, [store.vehicles.length]);
 
-
 	return (
 		<div className="container mt-5">
-			<h1 className="text-danger"><b>Characters</b></h1>
-			<div className="d-flex flex-row flex-nowrap overflow-auto">
+			<h1 className="text-light border-bottom mb-3"><b>Characters</b></h1>
+			<div className="d-flex flex-row flex-nowrap overflow-auto mb-5 cards">
 				{store && store.characters?.map((character, index) => (
 					<div key={index} className="col-3 mx-3">
 						<CharacterCard {...character} />
 					</div>
 				))}
 			</div>
-			<h1 className="text-primary mt-5"><b>Planets</b></h1>
-			<div className="d-flex flex-row flex-nowrap overflow-auto">
+			<h1 className="text-light border-bottom my-3"><b>Planets</b></h1>
+			<div className="d-flex flex-row flex-nowrap overflow-auto mb-5 cards">
 				{store && store.planets?.map((planet, index) => (
 					<div key={index} className="col-3 mx-3">
 						<PlanetsCard {...planet} />
 					</div>
 				))}
 			</div>
-			<h1 className="text-warning mt-5"><b>Vehicles</b></h1>
-			<div className="d-flex flex-row flex-nowrap overflow-auto mb-5">
+			<h1 className="text-light border-bottom my-3"><b>Vehicles</b></h1>
+			<div className="d-flex flex-row flex-nowrap overflow-auto mb-5 cards">
 				{store && store.vehicles?.map((vehicle, index) => (
 					<div key={index} className="col-3 mx-3">
 						<VehiclesCard {...vehicle} />

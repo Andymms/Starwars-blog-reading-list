@@ -6,9 +6,30 @@ export const CharacterCard = (props) => {
 
     const { store, dispatch } = useGlobalReducer()
 
+   const isCharacterFavorited = store.favorites.some(
+        (fav) => fav.name === props.name 
+    );
+
+    const addFavorite = (character, id) => {
+
+        const itemToFavorite = { 
+            name: character,
+            id: id,
+            class: props.class
+        }
+
+        dispatch ({
+            type: "item_favorited",
+			payload: { favorites: itemToFavorite }
+        })
+    }
+    
+    const buttonClass = isCharacterFavorited ? "btn-warning" : "btn-outline-warning";
+    const heartIcon = isCharacterFavorited ? "fa-solid fa-heart fill" : "fa-regular fa-heart no-fill";
+
     return (
         <>
-            <div className="card" style={{ width: "18rem" }}>
+            <div className="card mb-4 text-bg-dark" style={{ width: "18rem" }}>
                 <img src={props.img_url}
                     className="card-img-top" alt={props.name} />
                 <div className="card-body">
@@ -22,7 +43,11 @@ export const CharacterCard = (props) => {
                         <Link to={"/properties/character/" + props.uid}>
                             <button className="btn btn-success">Learn more</button>
                         </Link>
-                        <button className="btn btn-outline-warning"><i className="fa-regular fa-heart"></i></button>
+                        <button className={`btn ${buttonClass} favorite`} data-bs-toggle="button"
+                        onClick={() => addFavorite(props.name, props.uid)}
+                        disabled={isCharacterFavorited}>
+                            <i className={heartIcon}></i>
+                        </button>
                     </div>
                 </div>
             </div>

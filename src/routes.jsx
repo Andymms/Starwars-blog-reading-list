@@ -30,7 +30,7 @@ export const router = createBrowserRouter(
         <Route path="/demo" element={<Demo />} />
         <Route path="/properties/character/:characterId" element={ <CharacterProperties />} />
         <Route path="/properties/planet/:planetId" element={ <PlanetProperties />} />
-         <Route path="/properties/vehicle/:vehicleId" element={ <VehicleProperties />} />
+        <Route path="/properties/vehicle/:vehicleId" element={ <VehicleProperties />} />
       </Route>
     )
 );

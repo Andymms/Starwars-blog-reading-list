@@ -12,7 +12,7 @@ export const CharacterProperties = () => {
     return (
         <>
             <div className="container mt-5">
-                <div className="card mb-3 w-100" style={{ height: "400px" }}>
+                <div className="card mb-3 w-100 text-bg-dark" style={{ height: "400px" }}>
                     <div className="row g-0">
                         <div className="col-md-4">
                             <img src={details.img_url}
@@ -26,16 +26,17 @@ export const CharacterProperties = () => {
                         </div>
                     </div>
                 </div>
-                <table class="table table-borderless text-center text-danger">
+
+                <table class="table table-borderless table-dark text-center">
                     <thead>
                         <tr>
-                            <th scope="col" className="border-end">Birth Year</th>
-                            <th scope="col" className="border-end">Eye Color</th>
-                            <th scope="col" className="border-end">Gender</th>
-                            <th scope="col" className="border-end">Hair color</th>
-                            <th scope="col" className="border-end">Height</th>
-                            <th scope="col" className="border-end">Mass</th>
-                            <th scope="col">Skin Color</th>
+                            <th scope="col" className="border-end text-danger">Birth Year</th>
+                            <th scope="col" className="border-end text-danger">Eye Color</th>
+                            <th scope="col" className="border-end text-danger">Gender</th>
+                            <th scope="col" className="border-end text-danger">Hair color</th>
+                            <th scope="col" className="border-end text-danger">Height</th>
+                            <th scope="col" className="border-end text-danger">Mass</th>
+                            <th scope="col" className="text-danger">Skin Color</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -50,6 +51,7 @@ export const CharacterProperties = () => {
                         </tr>
                     </tbody>
                 </table>
+
             </div>
         </>
     );

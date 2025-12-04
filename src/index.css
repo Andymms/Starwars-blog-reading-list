@@ -1,0 +1,36 @@
+.btn:not(.active):hover {
+    display: inline-block;
+    color: #ffffff;
+}
+
+.btn:disabled {
+    background-color: hsla(0, 0%, 100%, 0);
+    color: #ffc107;
+}
+
+.fill {
+    color: #ffc107;
+}
+
+body {
+    background: black;
+    font-family: "Montserrat", sans-serif;
+}
+
+.navbar {
+    background: #161616;
+}
+
+.cards::-webkit-scrollbar-track {
+    background-color: #121212; 
+}
+
+
+.cards::-webkit-scrollbar-thumb {
+    background-color: #fff345; 
+    border-radius: 10px;
+}
+
+.cards::-webkit-scrollbar {
+    height: 8px; 
+}
